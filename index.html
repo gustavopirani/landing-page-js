@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>LPJS Clone</title>
+    <style>
+        .body-border {
+            background: white;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        html {
+            background: black;
+            padding: 12px;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            #navbar {
+                z-index: 1000;
+                display: none;
+                width: 90%;
+                top: 80px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: white;
+
+            }
+
+            #navMenu.active #navbar {
+                display: flex;
+                position: absolute;
+                height: calc(100vh - 120px);
+            }
+        }
+    </style>
+</head>
+
+<body class="body-border">
+    <header>
+        <nav id="navMenu" class="justify-between flex flex-row sm:flex sm:flex-row items-center py-4 px-8">
+            <div>
+                <a href="https://www.google.com/search?q=M" target="_blank">
+                    <img src="dist/images/m.png" href="" alt="logoM" class="w-12 ml-8 md:w-20">
+                </a>
+            </div>
+            <div class="md:hidden">
+                <svg id="hamBtn" class="h-6 w-6 cursor-pointer transform hover:rotate-90 ease-in duration-150"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+
+            <div id="navbar"
+                class="lg:mr-0 md:flex md:flex-row items-center flex-col hidden flex my-5 md:block md:justify-end">
+                <a href="#" class="hover:bg-gray-100 mx-3 py-1.5 px-2 font-medium">Service</a>
+                <a href="#" class="hover:bg-gray-100 mx-3 py-1.5 px-2 font-medium">Product</a>
+                <a href="#" class="hover:bg-gray-100 mx-3 py-1.5 px-2 font-medium">About</a>
+                <a href="#" class="hover:bg-gray-100 mx-3 py-1.5 px-2 font-medium">Blog</a>
+                <a href="#" class="hover:bg-gray-100 mx-3 py-1.5 px-2 font-medium">Career</a>
+                <a href="#"
+                    class="hover:bg-gray-200 hover:text-black mx-3 py-1.5 px-2 mt-2 font-medium text-white bg-black px-8">Get
+                    started</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mt-28">
+        <div class="font-bold text-2xl md:text-4xl lg:text-5xl text-center">
+            Crafting human conncetion <br>through digital experience
+        </div>
+        <div class="mt-4 text-center leading-6 text-xs lg:mt-10 lg:text-2xl">Werk is a strategic design agency powered
+            by data<br> analytics, market research, and digital technology.</div>
+
+        <div class="flex justify-center mt-10">
+            <button onclick="ask()"
+                class="font-semibold text-black bg-yellow-400 hover:bg-yellow-500 ease-in duration-150 p-3 lg:w-44 w-32 text-center z-10 shadow-md">
+                <a href="#">Let's talk</a>
+
+            </button>
+            <div class="transform rotate-3 border-black border-solid border-2 absolute w-32 lg:w-44 h-12 ml-4 mt-2 z-0">
+            </div>
+        </div>
+    </main>
+
+    <footer class="bottom-0 absolute inset-x-0">
+        <div class="flex justify-center">
+            <img class="w-2/4 md:w-2/5 lg:w-1/5" src="dist/images/img-2.png" alt="img-1">
+            <img class="w-2/4 md:w-2/5 lg:w-1/5" src="dist/images/img-1.png" alt="img-2">
+        </div>
+    </footer>
+    <script src="dist/js/script.js"></script>
+</body>
+</html>
